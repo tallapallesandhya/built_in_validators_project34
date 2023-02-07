@@ -4,7 +4,7 @@ from django.shortcuts import render
 from app.forms import *
 from django.http import HttpResponse
 
-def user_defined_validators(request):
+def built_in_validators(request):
     NFO=NameForm()
     d={'form':NFO}
 
@@ -12,4 +12,4 @@ def user_defined_validators(request):
         FD=NameForm(request.POST)
         if FD.is_valid():
             return HttpResponse(str(FD.cleaned_data))
-    return render(request,'user_defined_validators.html',d)
+    return render(request,'built_in_validators.html',d)

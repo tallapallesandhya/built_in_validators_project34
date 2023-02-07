@@ -18,5 +18,5 @@ from django.urls import path
 from app.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('user_defined_validators/',user_defined_validators,name='user_defined_validators'),
+    path('built_in_validators/',built_in_validators,name='built_in_validators'),
 ]
